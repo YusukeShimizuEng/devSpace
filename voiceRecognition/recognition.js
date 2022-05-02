@@ -8,15 +8,6 @@ btn.addEventListener('click',function(){
     speech.start();
 });
 
-/*
-speech.addEventListener('result',function(e){
-    console.log(e);
-
-    const text = e.results[0][0].transcript;
-    content.innerText = text;
-});
-*/
-
 speech.onresult = function(e){
     speech.stop();
     if(e.results[0].isFinal){
